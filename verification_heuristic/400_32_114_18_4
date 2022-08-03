@@ -1,0 +1,142 @@
+Parameters [n,k,t,s,w]: [400,32,114,18,4]
+Average N : 48237.948225
+
+DATA : 
+------ 
+ With heuristic   ;       Without heuristic (replace <e_N,h_N> By a Bernouilli variable which has the same parameter as the one given in Lemma 3.2 where u is given by t- |e_P|) 
+
+Description of the experiment :
+-------------------------------
+We have drawn uniformly at random :
+- a code of length n and dimension k,
+- an error e of weight t and then uniformly at random,
+- a set \mathcal{P} of s positions uniformly at random also.
+Then, we have created about N=48237.948225 equations of weight w on \mathcal{N} (the complement of \mathc
+al{P}).
+This number varies slightly depending on the particular code and the particular set of positions \mathcal
+P.
+Then we have compared two things :
+a) we have computed the Walsh (Fourier) transformation using the <e_N,h_N>.
+b) we have computed the Walsh (Fourier) transform corresponding to a Bernoulli noise of parameter given by
+ p which is computed
+with Lemma 3.2 with u = t- |e_P|
+
+Then we compute the position of e_P in the ordered table of Walsh values. O means that it is the highest W
+alsh coefficient.
+We compute
+a) the average of these positions for each value of |e_P|,
+b)  the average of the Walsh transform of e_P,
+c) the average of the highest Waksh coefficient
+d) the average of the second highest Walsh coefficient.
+
+We see in this set of results that as soon as |e_P| >= 10, the highest Walsh coefficient is typically the
+one of e_P.
+The experimental values more or less agree between the ones computed with our heuristic based on the value
+s of <e_N,h_N> and
+those obtained by the Bernoulli noise model. 
+ 
+---- 
+
+353 iterations where |e_P| = 0
+Average position of solution : 262143.0 ;       262143.0
+Average walsh transform of e_P : -23527.58640226629     ;       -23541.03682719547
+Average Highest walsh coefficient: 685.7393767705382    ;       660.7988668555241
+Average Second highest walsh coefficient: 653.728045325779      ;       630.8328611898017
+---- 
+
+2504 iterations where |e_P| = 1
+Average position of solution : 685.5311501597444        ;       741.1361821086261
+Average walsh transform of e_P : 617.7555910543131      ;       613.10303514377
+Average Highest walsh coefficient: 725.6038338658147    ;       705.2539936102237
+Average Second highest walsh coefficient: 670.8817891373802     ;       648.220447284345
+---- 
+
+8706 iterations where |e_P| = 2
+Average position of solution : 412.833103606708 ;       435.6082012405238
+Average walsh transform of e_P : 649.4485412359293      ;       651.9186767746381
+Average Highest walsh coefficient: 736.0639788651505    ;       720.6515047093958
+Average Second highest walsh coefficient: 673.6699977027338     ;       650.5155065472088
+---- 
+
+19244 iterations where |e_P| = 3
+Average position of solution : 163.62913115776345       ;       160.35304510496778
+Average walsh transform of e_P : 686.6346913323633      ;       685.9216379131158
+Average Highest walsh coefficient: 751.1996466431095    ;       737.3062772812306
+Average Second highest walsh coefficient: 676.212741633756      ;       653.4757846601539
+---- 
+
+29926 iterations where |e_P| = 4
+Average position of solution : 86.10345518946735        ;       90.8699792822295
+Average walsh transform of e_P : 723.6902024994988      ;       724.3974136202634
+Average Highest walsh coefficient: 770.6723584842612    ;       760.7405266323598
+Average Second highest walsh coefficient: 679.1608300474504     ;       656.7092494820557
+---- 
+
+33708 iterations where |e_P| = 5
+Average position of solution : 49.31197341877299        ;       54.756111308888094
+Average walsh transform of e_P : 761.4163996677347      ;       762.0634270796251
+Average Highest walsh coefficient: 794.1068589058978    ;       787.1028835884656
+Average Second highest walsh coefficient: 682.3345793283494     ;       658.9242909695027
+---- 
+
+28958 iterations where |e_P| = 6
+Average position of solution : 19.82333034049313        ;       16.294771738379723
+Average walsh transform of e_P : 801.6819531735617      ;       801.967953587955
+Average Highest walsh coefficient: 823.5070792181781    ;       818.1960770771462
+Average Second highest walsh coefficient: 685.3669452310243     ;       661.2134815940327
+---- 
+
+19791 iterations where |e_P| = 7
+Average position of solution : 7.343236824819362        ;       7.0585619726138145
+Average walsh transform of e_P : 843.8396240715476      ;       843.4446970845333
+Average Highest walsh coefficient: 857.2042847759083    ;       852.7711586074478
+Average Second highest walsh coefficient: 687.4535900156637     ;       663.004496993583
+---- 
+
+10471 iterations where |e_P| = 8
+Average position of solution : 2.26950625537198 ;       2.0498519721134563
+Average walsh transform of e_P : 888.6746251551905      ;       887.0349536815968
+Average Highest walsh coefficient: 896.8482475408271    ;       892.4902110591156
+Average Second highest walsh coefficient: 690.2015089294241     ;       664.326902874606
+---- 
+
+4319 iterations where |e_P| = 9
+Average position of solution : 1.1046538550590415       ;       1.7323454503357258
+Average walsh transform of e_P : 929.592498263487       ;       933.0639036814077
+Average Highest walsh coefficient: 933.7221579069229    ;       935.9057652234313
+Average Second highest walsh coefficient: 691.1729567029405     ;       665.8941884695531
+---- 
+
+1531 iterations where |e_P| = 10
+Average position of solution : 0.2364467668190725       ;       0.0868713259307642
+Average walsh transform of e_P : 981.666884389288       ;       980.7570215545395
+Average Highest walsh coefficient: 983.0320052253429    ;       981.5447419986937
+Average Second highest walsh coefficient: 692.5538863487916     ;       667.7119529719138
+---- 
+
+395 iterations where |e_P| = 11
+Average position of solution : 0.017721518987341773     ;       0.017721518987341773
+Average walsh transform of e_P : 1028.5493670886076     ;       1021.5670886075949
+Average Highest walsh coefficient: 1028.8177215189874   ;       1021.8810126582279
+Average Second highest walsh coefficient: 691.0253164556962     ;       665.4101265822785
+---- 
+
+76 iterations where |e_P| = 12
+Average position of solution : 0.0      ;       0.0
+Average walsh transform of e_P : 1085.25        ;       1095.5263157894738
+Average Highest walsh coefficient: 1085.25      ;       1095.5263157894738
+Average Second highest walsh coefficient: 692.7236842105264     ;       669.0
+---- 
+
+15 iterations where |e_P| = 13
+Average position of solution : 0.0      ;       0.0
+Average walsh transform of e_P : 1112.6666666666667     ;       1134.4666666666667
+Average Highest walsh coefficient: 1112.6666666666667   ;       1134.4666666666667
+Average Second highest walsh coefficient: 680.9333333333333     ;       660.0666666666667
+---- 
+
+3 iterations where |e_P| = 14
+Average position of solution : 0.0      ;       0.0
+Average walsh transform of e_P : 1181.3333333333333     ;       1255.0
+Average Highest walsh coefficient: 1181.3333333333333   ;       1255.0
+Average Second highest walsh coefficient: 692.0 ;       709.6666666666666
