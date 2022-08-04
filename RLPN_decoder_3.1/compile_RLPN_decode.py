@@ -1,32 +1,36 @@
-
-"""
+------------
+INSTRUCTIONS
+------------
 
 Execute this script : python compile_RLPN_decode.py (after possibly modifying the input parameters that are given below)
+
 This python script compiles and executes "main_RLPN_decode.cpp"
 
---- 
-INPUT
----
+------
+INPUT :
+------
 
------
-[n,k,t,w,s,u] below are the problem parameters as in Section 3 of the article.
 
-treshold :  treshold of acceptation: if the highest coefficient of the walsh transform is superior to this treshold then the vector associated to it is considered as a valid solution (i.e. we execute Algorithm 3.1 and replace the condition "if \hat{f_{y,\mathcal{H}}}(x_0) \approx \epsilon \mathcal{H}" by "\hat{f_{y,\mathcal{H}}}(x_0) >= threshold"
+[n,k,t,w,s,u] below are the problem parameters as in Section 3 of the preprint.
+
+treshold :  treshold of acceptation: if the highest coefficient of the Walsh transform is superior to this treshold then the vector associated to it is considered as a valid solution (i.e. in Algorithm 3.1 it corresponds to "\hat{f_{y,\mathcal{H}}}(x_0) >= threshold"
 
 N_iter : Number of iterations in Algorithm 3.1
 
-nbCodes : Number of times with apply Algorithm 3.1 (each time with a different code)
------
+nbCodes : Number of times we apply Algorithm 3.1 (each time with a different code)
 
------
-OUTPUT
------
+
+
+--------
+OUTPUT  :
+--------
+
 Average percentage of decodings that succeeded
 Average percentage of decodings that failed :
-	-> Percentage of False Positive : Vector that were accepted but that were not the solution
-	-> Percentage of False Negative : The error repartition on e_N was good (|e_N| = u with the notation of section 3) but the solution was no accepted
+	-> Percentage of False Positive : Vectors that were accepted but that were not the solution
+	-> Percentage of False Negative : The error repartition on e_N was good (|e_N| = u with the notation of Section 3) but the solution was not accepted
 	-> Percentage of successive bad bets : No iteration was such that |e_N| = u 
-"""
+
 
 
 # CHANGE THE PARAMETERS HERE

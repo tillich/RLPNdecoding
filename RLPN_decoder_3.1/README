@@ -1,9 +1,29 @@
-You must have g++ that supports -std=c++20
+-----------------------------------------------------------------------------------
+Compiling and executing the RLPN decoding algorithm (Algorithm 3.1 of the preprint)
+-----------------------------------------------------------------------------------
 
-You can delete "-fopenmp" in the variable optim in the function compile in the file "compile_RLPN_decode.py" and "compile_RLPN_statistics.py" if you wish to desactivate openmp (or if opemp is not on  your machine)
+python compile_RLPN_decode.py
+See compile_RLPN_decode.py for more information about what is implemented, how the parameters can be
+changed.
 
-##
-- To execute the RLPN decoding algorithm 3.1 see file "compile_RLPN_decode.py"
-##
-- To produce a full text execution trace of the RLPN decoding algorithm see file "compile_RLPN_statistics.py"
+--------------------------------------------------------------------
+Producing a full text execution trace of the RLPN decoding algorithm
+--------------------------------------------------------------------
+
+python compile_RLPN_statistics.py
+See compile_RLPN_statistics.py for more information about what is implemented, how the parameters can be
+changed.
+
+----------------------
+Compiler requirements:
+----------------------
+g++ that supports -std=c++20
+
+------------------------------------------
+Compiler options that can be desactivated:
+------------------------------------------
+
+If openmp is not on your machine, or if you wish to desactivate it, it suffices to erase
+ "-fopenmp" in the variable optim in the function compile in the file "compile_RLPN_decode.py" and "compile_RLPN_statistics.py".
+
 

@@ -1,41 +1,43 @@
 
-"""
+------------
+INSTRUCTIONS
+------------
 Execute this script : python compile_RLPN_statistics.py (after possibly modifying the input parameters that are given below)
 
 This python script compiles and executes main_RLPN_statistics.cpp
 
+We run here Algorithm 3.1 without taking into account the acceptation criteria. We print in a file the relevant information for each iteration 
+(highest value of the Walsh transform, |e_P| the error weight of e on the set P chosen at this iteration).
 
-We run here Algorithm 3.1 without taking into account the acceptation criteria. We print in a file the relevant information for each iteration (highest value of the Walsh transform, |e_P| the error weight of e on the set P choosen at this iteration).
+-------
+INPUT :
+-------
 
---- 
-INPUT
----
+[n,k,t,w,s,u] below are the problem parameters as in Section 3 of the preprint.
 
------
-[n,k,t,w,s,u] below are the problem parameters as in Section 3 of the article.
-
-nbCodes : Number of times with apply Algorithm 3.1 (each time with a different random code)
+nbCodes : Number of times we apply Algorithm 3.1 (each time with a different random code)
 
 N_iter : Number of iterations of the RLPN decoding Algorithm 3.1 ran for each nbCodes random codes.
 
------
 
----
+
+--------
 OUTPUT : A file "n_k_t_w_s_u.py" 
----
+--------
 
 n_k_t_w_s_u.py contains two lists : L_Parity and L_TrueRandom.
 
 L_parity is the list containing the execution trace of successive iterations of the RLPN decoder as described in Algorithm 3.1.
-L_TrueRandom is the list containing the execution trace of successive iterations of the RLPN decoder but where we replace <e_N,h_N> by a Bernouilli variable which has the same parameter as the one given in Lemma 3.2 where u is given by t-|e_P|
+L_TrueRandom is the list containing the execution trace of successive iterations of the RLPN decoder but where we replace <e_N,h_N> by a
+Bernoulli variable which has the same parameter as the one given in Lemma 3.2 where u is given by t-|e_P|
 
-Both lists are multidimentionnal -> L[0],L[1],...,L[nbCode] represent the execution trace of each random code
-								-> L[0][0], L[0][1], ..., L[0][nbIt] contains the trace of each iteration of the RLPN decoder.
+Both lists are multidimensional -> L[0],L[1],...,L[nbCode] represent the execution trace of each random code
+								-> L[0][0], L[0][1], ..., L[0][nbIt] contain the trace of each iteration of the RLPN decoder.
 
 More precisly L[.][.] is of the form :
 [|e_P| : the weight of the error e on the set P (P is different for each iteration)
 ,|e_N| 
-, N : Number of disctinct parity checks created
+, N : Number of distinct parity checks created
 , Theorical bias
 , Practical bias
 , Position of e_P in L
