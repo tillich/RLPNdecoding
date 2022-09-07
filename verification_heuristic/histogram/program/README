@@ -1,0 +1,3 @@
+find_parameters.py -> Find parameters to test
+generate_datas.py -> Launch a serie of simulation on different parameters (create files of the form w_s_k_n_u_t.py).
+generate_histograms.py -> Create the files histogram_*.pdf from the files w_s_k_n_u_t.py
